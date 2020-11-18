@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="profile-options">
+<input type="radio" name="choice-profiles" id="choice-profiles-business">
+<label for="choice-profiles-business">Business</label>
+<div class="reveal-if-active">
+
+<aside class="biz-explainer"><h4>This is a profile that allows multiple employees to have different levels of control over the profile.</h4></aside>
+<form class="registration" method="POST">
+{{form.hidden_tag()}}
+{{form.email.label}}{{form.email(class_="form-control")}}<br>
+{{form.username.label}}{{form.username(class_="form-control")}}<br>
+{{form.password.label}}{{form.password(class_="form-control")}}<br>
+{{form.pass_confirm.label}}{{form.pass_confirm(class_="form-control")}}<br>
+{{form.submit(class_="register-button")}}
+</form>
+</div>
+
+<input type="radio" name="choice-profiles" id="choice-profiles-individual">
+<label for="choice-profiles-individual">Individual</label>
+<div class="reveal-if-active2">
+
+<aside class="biz-explainer"><h4>This is an individual profile</h4></aside>
+<form class="registration" method="POST">
+{{form.hidden_tag()}}
+{{form.email.label}}{{form.email(class_="form-control")}}<br>
+{{form.username.label}}{{form.username(class_="form-control")}}<br>
+{{form.password.label}}{{form.password(class_="form-control")}}<br>
+{{form.pass_confirm.label}}{{form.pass_confirm(class_="form-control")}}<br>
+{{form.submit(class_="register-button")}}
+</form>
+</div>
+</div>
+
+{% endblock %}
+<script>
+document.getElementById('choice-profiles-individual').checked = false;
+</script>
+</body>
+</html>

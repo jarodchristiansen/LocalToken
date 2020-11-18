@@ -1,0 +1,248 @@
+
+*{
+  margin: 0;
+  padding: 0;
+} 
+
+.nav {
+background-color: rgb(33, 33, 33);
+color: white;
+}
+
+
+.nav-text{
+color:white;
+margin-left: 15px;
+}
+
+.jumbotron {
+  position:static;
+  width: 50%;
+  max-width: 50%;
+  margin-left: 25%;
+  margin-top: 16.5%;
+  background-color: rgba(138, 138, 138, 0.32);
+  z-index: 0;
+}
+
+.landingh1 {
+  position: relative;
+  color:white;
+  font-size: 3vw;
+  text-align: center;
+  margin-top: -30px;
+  z-index: 0;
+}
+.btn-group {
+  position:static;
+  margin-left: 10%;
+  margin-top: 30px;
+  margin-bottom: -20px;
+  z-index: 1001;
+}
+
+p {
+  color: white;
+  text-align: center;
+  margin: 40px 0 -10px 0;
+}
+  
+.btn {
+  color: white;
+  margin: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: gradient-bg 15s ease infinite;
+  z-index:998;
+  opacity:1;
+  animation-delay: 0s;
+  bottom:0;
+  background: linear-gradient(-12deg, #ee5425, #e71364);
+}
+
+.register-button {
+  background: linear-gradient(-45deg, #e71364, #089acf, #0bcea0);
+  overflow: hidden;
+  width: 80px;
+  background-size: 400% 400%;
+  animation: gradient-bg 25s ease infinite;
+  color:white;
+  margin-bottom: 20px;
+}
+
+.registration {
+  max-width: 100%;
+  background: linear-gradient(-45deg, #e71364, #089acf, #0bcea0);
+  overflow: hidden;
+  opacity: 0.5;
+  background-size: 400% 400%;
+  animation: gradient-bg 25s ease infinite;
+  color: white;
+  text-align: center;
+}
+.reveal-if-active {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.reveal-if-active2 {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+input[id="choice-profiles-business"]:checked ~ .reveal-if-active {
+  opacity: 1;
+  max-height: 100px; /* little bit of a magic number :( */
+  overflow: visible;
+  margin-top: 100px;
+  width: 100%;
+  position: absolute;
+}
+input[id="choice-profiles-individual"]:checked ~ .reveal-if-active2 {
+  opacity: 1;
+  
+  max-height: 100px; /* little bit of a magic number :( */
+  overflow: visible;
+  margin-top: 100px;
+  width: 100%;
+  position: absolute;
+  margin-right: 30%;
+}
+.profile-options {
+  display: flex;
+  flex-direction: row;
+}
+#choice-profiles-individual {
+  position: relative;
+}
+
+#choice-profiles-business {
+  position: relative;
+}
+
+.form-control {
+  width: 80%;
+  margin-left: 10%;
+}
+
+
+section
+{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(-45deg, #ee5425, #e71364, #089acf, #0bcea0);
+    overflow: hidden;
+    background-size: 400% 400%;
+    animation: gradient-bg 15s ease infinite;
+    z-index: -1;
+
+}
+ section .wave
+ {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 100px;
+     background: url(./profile_pics/wave.png);
+     background-size: 1000px 100px;
+     
+ }
+
+@keyframes gradient-bg
+{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+
+}
+
+
+section .wave.water
+{
+   animation: animate 25s linear infinite;
+   z-index:1000;
+   opacity:1;
+   animation-delay: 0s;
+   bottom:0;
+
+}
+
+section .wave.water:nth-child(2)
+{
+   animation: animate2 15s linear infinite;
+   z-index:999;
+   opacity:0.5;
+   animation-delay: -5s;
+   bottom:10px;
+
+}
+section .wave.water:nth-child(3)
+{
+   animation: animate 30s cubic-bezier(.55, .5,.45,.5) infinite;
+   z-index:998;
+   opacity:0.2;
+   animation-delay: -5s;
+   bottom:15px;
+
+}
+section .wave.water:nth-child(4)
+{
+   animation: animate2 5s linear infinite;
+   z-index:997;
+   opacity:0.7;
+   animation-delay: -5s;
+   bottom:20px;
+
+}
+
+@keyframes animate
+{
+   0%{
+       background-position-x: 0;
+   }
+   100%{
+       background-position-x: 1000px;
+   }
+}
+@keyframes animate2
+{
+   0%{
+       background-position-x: 0;
+   }
+   100%{
+       background-position-x: -1000px;
+   }
+}
+
+@keyframes animate3
+{
+   0%{
+       background-position-x: 0;
+   }
+   100%{
+       background-position-x: 1200px;
+   }
+}
+
+
+.container-explainer {
+  margin-top: 100vh;
+  display:block;
+  height: 100vh;
+  background-color: rgb(33, 33, 33);
+}
+
+.left-text {
+  float:left; 
+  max-width: 55%;
+}
